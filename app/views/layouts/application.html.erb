@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Waponet</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default page-nav">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="active navbar-brand" href="#">WapoNet</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class= "header-elements"><a href="#">Events</a></li>
+          <li class= "header-elements"><a href="#">Blog Posts</a></li>
+          <li class= "header-elements"><a href="#">
+          <% if user_signed_in? %>
+            <li class= "header-elements"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+           <li class= "header-elements"><%= link_to "Sign Up", new_user_registration_path %></li>
+           <li class= "header-elements"><%= link_to "Login", new_user_session_path %></li>
+          <% end %></h1></a></li>
+        </ul>
+      </div>
+  </nav>
+
+    
+    <% if notice %>
+     <div class="alert alert-info"><%= notice %></div>
+    <% elsif alert %>
+     <div class="alert alert-warning"><%= alert %></div>
+    <% end %>
+    
+  <footer class= "footer">
+    <ul class= "footer-elements">
+      <li>contact us!</li>
+      <li>info@waponet.com</li>
+    </ul>
+  </footer>
+    
+    <%= yield %>
+  </body>
+</html>

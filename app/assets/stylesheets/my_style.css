@@ -1,0 +1,17 @@
+nav.page-nav{
+  background-color: #408598;
+}
+.navbar-default .navbar-nav>li.header-elements>a{
+  text-decoration: none;
+  color: white;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #31C6D2;
+   color: black;
+   text-align: center;
+}
