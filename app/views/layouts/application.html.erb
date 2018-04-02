@@ -15,17 +15,17 @@
     <nav class="navbar navbar-default page-nav">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="active navbar-brand" href="#">WapoNet</a>
+          <a href="/" class="navbar-left"><%= image_tag "waponet_logo.png" %></a>
         </div>
         <ul class="nav navbar-nav">
           <li class= "header-elements"><a href="#">Events</a></li>
           <li class= "header-elements"><a href="#">Blog Posts</a></li>
-          <li class= "header-elements"><a href="#">
+          <li class= "header-elements navbar-right"><a href="#">
           <% if user_signed_in? %>
-            <li class= "header-elements"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+            <li class= "header-elements navbar-right"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
           <% else %>
-           <li class= "header-elements"><%= link_to "Sign Up", new_user_registration_path %></li>
-           <li class= "header-elements"><%= link_to "Login", new_user_session_path %></li>
+           <li class= "header-elements navbar-right"><%= link_to "Sign Up", new_user_registration_path %></li>
+           <li class= "header-elements navbar-right"><%= link_to "Login", new_user_session_path %></li>
           <% end %></h1></a></li>
         </ul>
       </div>

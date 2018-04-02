@@ -6,6 +6,10 @@ nav.page-nav{
   color: white;
 }
 
+.navbar-default .navbar-nav>li.header-elements .navbar-right>a{
+  float: right;
+}
+
 .footer {
    position: fixed;
    left: 0;
@@ -14,4 +18,14 @@ nav.page-nav{
    background-color: #31C6D2;
    color: black;
    text-align: center;
+}
+
+
+.navbar.container-fluid.navbar-header.navbar-left >a{
+  max-width: 260px;
+  max-height: 260px;
+  float: left;
+  background: transparent;
+  height: 100%;
+  width: auto;
 }
