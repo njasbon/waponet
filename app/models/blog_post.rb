@@ -6,7 +6,7 @@ class BlogPost < ActiveRecord::Base
   end
   
   def my_date
-    datetime.strftime('%A, %b %d')
+    datetime.strftime('%b %d, %Y')
   end
   
   validates :name, presence: true

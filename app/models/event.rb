@@ -4,6 +4,9 @@ class Event < ActiveRecord::Base
   
   validates :name, presence: true
   validates :datetime, presence: true
-
+  
+  def my_date
+    datetime.strftime('%b %d, %Y')
+  end
 
 end

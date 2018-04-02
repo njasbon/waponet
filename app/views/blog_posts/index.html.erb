@@ -1,4 +1,25 @@
-<% @blog_posts.each do |blog_post| %>
-<%link_to(blog_post.name, "/blog_posts/#{blog_post.id}") %>
-<% end %>
 
+
+<h1 class="events-index-title">Most Recent Posts:</h1>
+<table class = "table table-hover" data-toggle="table">
+    <thead>
+    <tr>
+        <th scope="col">Blog Post Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Location</th>
+        <th scope="col">Read me!</th>
+
+    </tr>
+    </thead>
+      <% @blog_posts.each do |blog_post| %>
+    <tbody>
+      <tr>
+        <td><%= blog_post.id %> </td>
+        <td><%= blog_post.name %> </td>
+        <td><%= blog_post.address %> </td> 
+        <td><%= link_to 'more details', "/blog_posts/#{blog_post.id}" %></td>
+      </tr>
+    </tbody>
+      <% end %>
+
+</table>

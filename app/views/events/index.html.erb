@@ -1,4 +1,27 @@
-<% @events.each do |event| %>
-<%link_to(event.name, "/events/#{event.id}") %>
-<% end %>
 
+<h1 class="events-index-title">Upcoming Tournnaments/ Scrimages</h1>
+<table class = "table table-hover" data-toggle="table">
+    <thead>
+    <tr>
+        <th scope="col">Event Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Date of Event</th>
+        <th scope="col">Team Host</th>
+        <th scope="col">Team Sign Up</th>
+
+    </tr>
+    </thead>
+      <% @events.each do |event| %>
+    <tbody>
+      <tr>
+        <td><%= event.id %> </td>
+        <td><%= event.name %> </td>
+        <td><%= event.my_date %> </td> 
+        <td><%= event.team_host %> </td>
+        
+        <td><%= link_to 'Sign up for Event', "/events/#{event.id}" %></td>
+      </tr>
+    </tbody>
+      <% end %>
+
+</table>

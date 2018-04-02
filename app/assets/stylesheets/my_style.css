@@ -1,9 +1,24 @@
 nav.page-nav{
   background-color: #408598;
 }
+
+.page-contents {
+  margin: 35px;
+}
+
 .navbar-default .navbar-nav>li.header-elements>a{
   text-decoration: none;
   color: white;
+}
+.navbar .container-fluid .navbar-header a.navbar-left{
+  max-width: 100px;
+  max-height: 100px;
+}
+a.navbar-left img {
+  max-height: 100px;
+  max-width: 100px;
+  float: left;
+  background: transparent;
 }
 
 .navbar-default .navbar-nav>li.header-elements .navbar-right>a{
@@ -18,14 +33,4 @@ nav.page-nav{
    background-color: #31C6D2;
    color: black;
    text-align: center;
-}
-
-
-.navbar.container-fluid.navbar-header.navbar-left >a{
-  max-width: 260px;
-  max-height: 260px;
-  float: left;
-  background: transparent;
-  height: 100%;
-  width: auto;
 }
