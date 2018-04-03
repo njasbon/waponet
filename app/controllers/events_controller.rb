@@ -18,6 +18,13 @@ class EventsController < ApplicationController
     @users = User.all
   end
   
+  def person
+  end
+  
+  def team
+  end
+  
+  
   def destroy
     event = Event.find(params[:id])
     event.destroy!

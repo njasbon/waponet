@@ -9,6 +9,9 @@ nav.page-nav{
 .navbar-default .navbar-nav>li.header-elements>a{
   text-decoration: none;
   color: white;
+  font-weight: bold;
+  font-family: Georgia;
+  font-size: 20;
 }
 .navbar .container-fluid .navbar-header a.navbar-left{
   max-width: 100px;
@@ -18,7 +21,6 @@ a.navbar-left img {
   max-height: 100px;
   max-width: 100px;
   float: left;
-  background: transparent;
 }
 
 .navbar-default .navbar-nav>li.header-elements .navbar-right>a{
@@ -34,3 +36,18 @@ a.navbar-left img {
    color: black;
    text-align: center;
 }
+.footer-elements{
+  list-style-type: none;
+  font-weight: bold;
+  font-family: "Comic Sans MS";
+
+}
+
+.event-info-note {
+  margin-left: 65px;
+  margin-right: 65px;
+  outline: 3px solid orange;
+}
+
+
+

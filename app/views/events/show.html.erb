@@ -1,0 +1,31 @@
+
+<h1 class="events-index-title">Team or Individual Sign up!</h1>
+<table class = "table table-hover" data-toggle="table">
+    <thead>
+    <tr>
+        <th scope="col">Event Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Start Date of Event</th>
+        <th scope="col">End Date of Event</th>
+        <th scope="col">Individual Sign Up</th>
+        <th scope="col">Team Sign Up</th>
+
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @event.id %> </td>
+        <td><%= @event.name %> </td>
+        <td><%= @event.my_date %> </td> 
+        <td><%= @event.my_date %> </td> 
+        <td><%= link_to 'Individual Sign Up', "/events/#{@event.id}/person/new" %></td>
+        <td><%= link_to 'Team Sign Up', "/events/#{@event.id}/team/new" %></td>
+
+      </tr>
+    </tbody>
+
+</table>
+
+<div align="center" class="event-info-note"><h4><u>Team sign ups:</u></h4> When signing up a team you must have each players <strong>full name</strong> and <strong>American insurance water polo number</strong>.</div>
+<div align="center" class="event-info-note"><h4><u>Individual sign up:</u></h4> You must have an <strong>American insurance water polo number</strong>. We will then place you on teams who need more players. You will recieve an email confirmation which will include the: team name(s) and email of coach/ leader of the team.</div>
+<div align="center"><h3><u>Drop outs less than 3 weeks prior to tournament will not be refunded.</u></h3></div>
