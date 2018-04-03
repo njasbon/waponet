@@ -4,8 +4,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :events
   resources :blog_posts
-  
-  get "/events/:id/person/new", to: "events#person"
-  get "/events/:id/team/new", to: "events#team"
+  resources :user_events, only: [:create]
+  resources :users, only: [:show]
 end
 

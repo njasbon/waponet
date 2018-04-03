@@ -43,6 +43,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'database_cleaner'
   gem 'rspec-rails'
+  gem 'pry-rails'
 end
 
 group :development do

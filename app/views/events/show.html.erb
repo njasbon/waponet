@@ -18,8 +18,8 @@
         <td><%= @event.name %> </td>
         <td><%= @event.my_date %> </td> 
         <td><%= @event.my_date %> </td> 
-        <td><%= link_to 'Individual Sign Up', "/events/#{@event.id}/person/new" %></td>
-        <td><%= link_to 'Team Sign Up', "/events/#{@event.id}/team/new" %></td>
+        <td><%= button_to 'Individual Sign Up', :controller => "user_events", :action => "create", :user_event => {:event_id => @event.id}, :method=>:post %></td>
+        <td><%= button_to 'Team Sign Up', "/events/#{@event.id}/team/new" %></td>
 
       </tr>
     </tbody>

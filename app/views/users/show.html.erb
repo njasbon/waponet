@@ -1,0 +1,23 @@
+<h3>Account Page</h3>
+
+<h1 class="account-show-page"><%= current_user.name %></h1>
+<table class = "table table-hover" data-toggle="table">
+    <thead>
+    <tr>
+        <th scope="col">Profile Pic</th>
+        <th scope="col">User Id</th>
+        <th scope="col">Email</th>
+        <th scope="col">Master League-Team Name</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @user.profile_pic_url %> </td>
+        <td><%= @user.id %> </td>
+        <td><%= @user.email %> </td>
+        <td><%= @user.team_name %> </td>
+
+      </tr>
+    </tbody>
+
+</table>
