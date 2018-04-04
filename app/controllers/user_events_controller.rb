@@ -9,5 +9,6 @@ class UserEventsController < ApplicationController
   def user_event_params
     params.require(:user_event).permit(:event_id)
   end
+  
 end
 

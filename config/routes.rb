@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'welcome#index'
   resources :events
-  resources :blog_posts
   resources :user_events, only: [:create]
-  resources :users, only: [:show]
+  resources :users, only: [:show, :edit, :update]
 end
 

@@ -13,7 +13,7 @@ nav.page-nav{
   font-family: Georgia;
   font-size: 20;
 }
-.navbar .container-fluid .navbar-header a.navbar-left{
+.navbar-nav .container-fluid .navbar-header a.navbar-left{
   max-width: 100px;
   max-height: 100px;
 }
@@ -23,25 +23,10 @@ a.navbar-left img {
   float: left;
 }
 
-.navbar-default .navbar-nav>li.header-elements .navbar-right>a{
+.navbar-nav .navbar-nav>li.header-elements .navbar-right>a{
   float: right;
 }
 
-.footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: #31C6D2;
-   color: black;
-   text-align: center;
-}
-.footer-elements{
-  list-style-type: none;
-  font-weight: bold;
-  font-family: "Comic Sans MS";
-
-}
 
 .event-info-note {
   margin-left: 65px;
