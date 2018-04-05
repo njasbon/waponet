@@ -5,6 +5,10 @@ nav.page-nav{
 .page-contents {
   margin: 35px;
 }
+.edit-profile-heading {
+  font-family: Georgia;
+  margin-bottom: 25px;
+}
 
 .navbar-default .navbar-nav>li.header-elements>a{
   text-decoration: none;
@@ -28,14 +32,20 @@ a.navbar-left img {
 }
 
 .event-info-note {
+  font-family: Georgia;
   margin-left: 65px;
   margin-right: 65px;
   outline: 3px solid orange;
 }
 
 ul {
+  font-family: Georgia;
   list-style-type: none;
+  padding: 20px;
 }
 
+.control-label {
+  padding-right: 10px
+}
 
 

@@ -1,46 +1,50 @@
-<h3>Edit Profile</h3>
+<h3 class="text-center edit-profile-heading">Edit Profile</h3>
 
-<%= form_for @user, :method => :put do |f| %>
-<div class="container">
-  <ul class="edit-account-info">
-      <li> <label class="col-md-4 control-label" for="profile_pic_url">Picture URL</label>
-        <%= f.text_field :profile_pic_url %>
-        </li>
+<%= form_for @user, :method => :put, class: 'form-horizontal' do |f| %>
+  <div class="form-group row">      
+    <label class="control-label col-sm-2" for="profile_pic_url">Picture URL</label>
+      <div class="col-sm-6"><input type="profile_pic_url" class="form-control" id="profile_pic_url" value="<%= @user.profile_pic_url%>"></div>
+  </div>
+  <div class="form-group row">      
+    <label class="control-label col-sm-2" for="first_name">First Name</label>
+      <div class="col-sm-4"><input type="first_name" class="form-control" id="first_name" value="<%=@user.first_name%>"></div>
+  </div>
+  <div class="form-group row">      
+    <label class="control-label col-sm-2" for="last_name">Last Name</label>
+      <div class="col-sm-4"><input type="last_name" class="form-control" id="last_name" value="<%=@user.last_name%>"></div>
+  </div>
+  <div class="form-group row">      
+    <label class="control-label col-sm-2" for="hometown">Hometown</label>
+      <div class="col-sm-4"><input type="hometown" class="form-control" id="hometown" value="<%=@user.hometown%>"></div>
+  </div>
+  <div class="form-group row">      
+    <label class="control-label col-sm-2" for="team_name">Team Name</label>
+      <div class="col-sm-4"><input type="team_name" class="form-control" id="team_name" value="<%=@user.team_name%>"></div>
+  </div>
+  <div class="form-group row">      
+    <label class="control-label col-sm-2" for="email">Email</label>
+      <div class="col-sm-4"><input type="email" class="form-control" id="email" value="<%=@user.email%>"></div>
+  </div>
+  <div class="form-group row">      
+    <label class="control-label col-sm-2" for="phone_number">Phone Number</label>
+      <div class="col-sm-4"><input type="phone_number" class="form-control" id="phone_number" value="<%=@user.phone_number%>"></div>
+  </div>
+  <div class="form-group row">      
+    <label class="control-label col-sm-2" for="gender">Gender</label>
+      <div class="col-sm-4"><input type="gender" class="form-control" id="gender" value="<%=@user.gender%>"></div>
+  </div>
+  <div class="form-group row">      
+    <label class="control-label col-sm-2" for="age">Age</label>
+      <div class="col-sm-4"><input type="age" class="form-control" id="age" value="<%=@user.age%>"></div>
+  </div>
+      <%= f.submit "Confirm edit" %>
 
-      <li><label class="col-md-4 control-label" for="first_name">First Name<span class="required">*</span></label>  
-        <%= f.text_field :first_name %>
-        </li>
-
-      <li><label class="col-md-4 control-label" for="last_name">Last Name<span class="required">*</span></label>  
-        <%= f.text_field :last_name %>
-        </li>
-
-      <li><label class="col-md-4 control-label" for="hometown">Hometown</label>  
-        <%= f.text_field :hometown %>
-        </li>
-
-      <li><label class="col-md-4 control-label" for="team_name">Team Name</label>  
-        <%= f.text_field :team_name %>
-        </li>
-
-      <li><label class="col-md-4 control-label" for="email">Email<span class="required">*</span></label>  
-        <%= f.text_field :email %>
-        </li>
-
-      <li></li><label class="col-md-4 control-label" for="phone_number">Phone number</label>  
-        <%= f.text_field :phone_number %>
-        </li>
-
-      <li><label class="col-md-4 control-label" for="gender">Gender</label>  
-        <%= f.text_field :gender %>
-        </li>
-
-      <li><label class="col-md-4 control-label" for="age">Age</label>  
-        <%= f.text_field :age %>
-        </li>
-        
-        <%= f.submit "Confirm edit" %>
-    
 <% end %>
-  </ul>
-</div>
+
+
+
+
+
+
+
+ 

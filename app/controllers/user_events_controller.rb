@@ -5,9 +5,11 @@ class UserEventsController < ApplicationController
     redirect_to "/users/#{current_user.id}"
   end 
   
+  
+  
   private
   def user_event_params
-    params.require(:user_event).permit(:event_id)
+    params.require(:user_event).permit(:id, :event_id, user_attributes:[:id, :first_name])
   end
   
 end

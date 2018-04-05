@@ -1,0 +1,51 @@
+ <li><label class="col-md-4 control-label" for="first_name">First Name<span class="required">*</span></label>  
+        </li>
+
+      <li><label class="col-md-4 control-label" for="last_name">Last Name<span class="required">*</span></label>  
+        </li>
+
+      <li><label class="col-md-4 control-label" for="hometown">Hometown</label>  
+        </li>
+
+      <li><label class="col-md-4 control-label" for="team_name">Team Name</label>  
+        </li>
+
+      <li><label class="col-md-4 control-label" for="email">Email<span class="required">*</span></label>  
+        </li>
+
+      <li></li><label class="col-md-4 control-label" for="phone_number">Phone number</label>  
+        </li>
+
+      <li><label class="col-md-4 control-label" for="gender">Gender</label>  
+        </li>
+
+      <li><label class="col-md-4 control-label" for="age">Age</label>  
+        </li>
+  </ul>
+    <ul class="edit-account-info">
+      <div class="column">
+        <li><%= f.text_field :profile_pic_url %>
+        </li>
+        <li><%= f.text_field :first_name %>
+        </li>
+        <li><%= f.text_field :last_name %>
+        </li>
+        <li><%= f.text_field :hometown %>
+        </li>
+        <li><%= f.text_field :team_name %>
+        </li>
+        <li><%= f.text_field :email %>
+        </li>
+        <li><%= f.text_field :phone_number %>
+        </li>
+        <li><%= f.text_field :gender %>
+        </li>
+        <li><%= f.text_field :age %>
+        </li>
+    </ul>    
+      </div>  
+        <%= f.submit "Confirm edit" %>
+    
+<% end %>
+    </div>
+</div>
