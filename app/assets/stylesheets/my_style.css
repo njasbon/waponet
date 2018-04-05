@@ -27,11 +27,14 @@ a.navbar-left img {
   float: right;
 }
 
-
 .event-info-note {
   margin-left: 65px;
   margin-right: 65px;
   outline: 3px solid orange;
+}
+
+ul {
+  list-style-type: none;
 }
 
 

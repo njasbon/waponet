@@ -6,6 +6,14 @@ class User < ActiveRecord::Base
   has_many :blog_posts
   has_many :events, through: :user_events
   
-
+  def my_date
+    datetime.strftime('%b %d, %Y')
+  end
+  
+  def date_created_user
+    created_at.strftime('%b %d, %Y')
+  end
+  
+  
 end
 

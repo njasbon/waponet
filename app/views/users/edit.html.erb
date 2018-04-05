@@ -1,116 +1,46 @@
-<div class="col-md-12 profile-dashboard">
-      <div class="row">
-          <div class="col-md-7 dashboard-form calender">
-              <form class="form-horizontal" accept-charset="UTF-8" action="/users/<%= @user.id %>" method="put">
-                  <div class="bg-white pinside40 mb30">
-                      <!-- Form Name -->
-                      <div class="add_listing_info">
-              <h3>Account Picture</h3>	
-                      <div class="form-group">
-                          <div class="col-md-4">
-                              <div class="photo-upload"><img src="images/profile-dashbaord.png" alt=""></div>
-                          </div>
-                          <div class="col-md-8 upload-file">
-                              <div class="form-group">
-                  <input type="file">
-              </div> 
-                          </div>
-                      </div>
-                      </div>
-                      <!-- Text input-->
-                      <div class="add_listing_info">
-              <h3>Personal Information</h3>	
-                      <div class="form-group">
-                          <label class="col-md-4 control-label" for="first_name">First Name<span class="required">*</span></label>
-                          <div class="col-md-8">
-                              <input id="first_name" last_name="first_name" type="string" placeholder="First Name" class="form-control input-md" required="" value="<%=@user.first_name%>">
-                          </div>
-                           <label class="col-md-4 control-label" for="last_name">Last Name<span class="required">*</span></label>
-                          <div class="col-md-8">
-                              <input id="last_name" last_name="last_name" type="string" placeholder="Last Name" class="form-control input-md" required="" value="<%=@user.last_name%>">
-                          </div>
-                      </div>
-                      </div>
-                      <div class="form-group">
-                          <label class="col-md-4 control-label" for="hometown">Hometown</label>
-                          <div class="col-md-8">
-                              <input id="hometown" hometown="hometown" type="string" placeholder="Hometown" class="form-control input-md" required="" value="<%=@user.hometown%>">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <label class="col-md-4 control-label" for="team_name">I play for: </label>
-                          <div class="col-md-8">
-                              <input id="team_name" team_name="team_name" type="string" placeholder="Team Name" class="form-control input-md" required="" value="<%=@user.team_name%>">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <label class="col-md-4 control-label" for="email">Email</label>
-                          <div class="col-md-8">
-                              <input id="email" email="email" type="string" placeholder="Email" class="form-control input-md" required="" value="<%=@user.email%>">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <label class="col-md-4 control-label" for="phone_number">Phone</label>
-                          <div class="col-md-8">
-                              <input id="phone_number" phone_number="phone_number" type="string" placeholder="Phone" class="form-control input-md" required="" value="<%=@user.phone_number%>">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <label class="col-md-4 control-label" for="gender">Gender</label>
-                          <div class="col-md-8">
-                              <input id="gender" gender="gender" type="string" placeholder="Gender" class="form-control input-md" required="" value="<%=@user.gender%>">
-                          </div>
-                      </div>
-                     <div class="form-group">
-                          <label class="col-md-4 control-label" for="age">Age</label>
-                          <div class="col-md-8">
-                              <input id="age" age="age" type="integer" placeholder="Age" class="form-control input-md" required="" value="<%=@user.age%>">
-                          </div>
-                      </div>
-                      
-                      <!-- Button -->
-                      <div class="form-group">
-                          <label class="col-md-4 control-label" for="submit"></label>
-                          <div class="col-md-4">
-                              <button id="submit" name="submit" class="btn btn-primary">Update Profile</button>
-                          </div>
-                      </div>
-                  </div>
-              </form>
-          </div>
-          <div class="col-md-5 dashboard-form">
-              <form class="form-horizontal">
-                  <div class="bg-white pinside30">
-                      <!-- Form Name -->
-                      <h3 class="form-title">Change Password</h3>
-                      <!-- Text input-->
-                      <div class="form-group">
-                          <label class="col-md-4 control-label" for="oldpassword">Old Password</label>
-                          <div class="col-md-8">
-                              <input id="oldpassword" name="oldpassword" type="text" placeholder="Old Password" class="form-control input-md" required="">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <label class="col-md-4 control-label" for="newpassword">New Password</label>
-                          <div class="col-md-8">
-                              <input id="newpassword" name="newpassword" type="text" placeholder="New Password" class="form-control input-md" required="">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <label class="col-md-4 control-label" for="ConfirmPassword">Confirm Password</label>
-                          <div class="col-md-8">
-                              <input id="ConfirmPassword" name="ConfirmPassword" type="text" placeholder="Confirm Password" class="form-control input-md" required="">
-                          </div>
-                      </div>
-                      <!-- Button -->
-                      <div class="form-group">
-                          <label class="col-md-4 control-label" for="submit"></label>
-                          <div class="col-md-4">
-                              <button id="submit" name="submit" class="btn btn-primary btn-lg">Save Password</button>
-                          </div>
-                      </div>
-                  </div>
-              </form>
-          </div>
-      </div>
-  </div>
+<h3>Edit Profile</h3>
+
+<%= form_for @user, :method => :put do |f| %>
+<div class="container">
+  <ul class="edit-account-info">
+      <li> <label class="col-md-4 control-label" for="profile_pic_url">Picture URL</label>
+        <%= f.text_field :profile_pic_url %>
+        </li>
+
+      <li><label class="col-md-4 control-label" for="first_name">First Name<span class="required">*</span></label>  
+        <%= f.text_field :first_name %>
+        </li>
+
+      <li><label class="col-md-4 control-label" for="last_name">Last Name<span class="required">*</span></label>  
+        <%= f.text_field :last_name %>
+        </li>
+
+      <li><label class="col-md-4 control-label" for="hometown">Hometown</label>  
+        <%= f.text_field :hometown %>
+        </li>
+
+      <li><label class="col-md-4 control-label" for="team_name">Team Name</label>  
+        <%= f.text_field :team_name %>
+        </li>
+
+      <li><label class="col-md-4 control-label" for="email">Email<span class="required">*</span></label>  
+        <%= f.text_field :email %>
+        </li>
+
+      <li></li><label class="col-md-4 control-label" for="phone_number">Phone number</label>  
+        <%= f.text_field :phone_number %>
+        </li>
+
+      <li><label class="col-md-4 control-label" for="gender">Gender</label>  
+        <%= f.text_field :gender %>
+        </li>
+
+      <li><label class="col-md-4 control-label" for="age">Age</label>  
+        <%= f.text_field :age %>
+        </li>
+        
+        <%= f.submit "Confirm edit" %>
+    
+<% end %>
+  </ul>
+</div>
