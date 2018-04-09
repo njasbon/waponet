@@ -1,0 +1,32 @@
+<h3 class="text-center edit-profile-heading">Create Event</h3>
+
+<%= form_for @event, :method => :post, class: 'form-horizontal' do |f| %>
+
+  <div class="form-group row">      
+    <label class="control-label col-sm-2" for="name">Event Name</label>
+      <div class="col-sm-4"><input type="name" class="form-control" name="user[name]" id="name"></div>
+  </div>
+  <div class="form-group row">      
+    <label class="control-label col-sm-2" for="datetime">Start Date of Event</label>
+      <div class="col-sm-4"><input type="datetime" class="form-control" name="user[datetime]" id="datetime"></div>
+  </div>
+  <div class="form-group row">      
+    <label class="control-label col-sm-2" for="end_date">End Date of Event</label>
+      <div class="col-sm-4"><input type="end_date" class="form-control" name="user[end_date]" id="end_date" ></div>
+  </div>
+  <div class="form-group row">      
+    <label class="control-label col-sm-2" for="team_host">Team Host</label>
+      <div class="col-sm-4"><input type="team_host" class="form-control"  name="user[team_host]" id="team_host" ></div>
+  </div>
+  <div class="form-group row">      
+    <label class="control-label col-sm-2" for="email">Contact Email</label>
+      <div class="col-sm-4"><input type="email" class="form-control" name="user[email]" id="email" ></div>
+  </div>
+  <div class="form-group row">      
+    <label class="control-label col-sm-2" for="phone_number">Contact Phone Number</label>
+      <div class="col-sm-4"><input type="phone_number" class="form-control" name="user[phone_number]"  id="phone_number"></div>
+
+      
+<button type="submit" name="commit" class="btn btn-primary">Submit</button>
+
+<% end %>

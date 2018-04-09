@@ -1,28 +1,45 @@
 <h1 class="account-show-page"><%= @user.first_name %> <%= @user.last_name %></h1>
+
 <table class = "table table-hover" data-toggle="table">
     <thead>
     <tr>
-        <th scope="col">User Id</th>
-    </tr>
+        <th scope="col">Event Id</th>
+        <th scope="col">Event Sign Ups</th>
+        <th scope="col">Start Date of Event</th>
+        <th scope="col">End Date of Event</th>
+        <th scope="col">Team Host</th>
+`    </tr>
     </thead>
     <tbody>
+      <% @user.events.each do |event| %>
       <tr>
-        <td><%= @user.id %> </td>
+        <td>
+        <%= event.id%>
+        </td>
+        
+        <td>
+        <%= event.name%>
+        </td>
+        
+        <td><%=event.my_date%></td>
+        <td><%=event.end_date%></td>
+
+          <td>
+           <%= event.team_host%>
+        </td>
       </tr>
+
+      <% end %> 
     </tbody>
 </table>
-
 
 <div class="container">
       <div class="row">
       <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
 
-<p class=" text-info"><h4>User since: <%= @user.date_created_user %></h4></p>
       </div>
         <div class="col-md-12 col-md-12 col-md-6 col-lg-6 col-sm-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
-   
-   
-          <div class="panel panel-info">
+  <div class="panel panel-info">
             <div class="panel-heading">
               <h3 class="panel-title"><%@user.first_name%></h3>
             </div>
@@ -33,6 +50,14 @@
                 <div class=" col-md-9 col-lg-9 "> 
                   <table class="table table-user-information">
                     <tbody>
+                       <tr>
+                        <td>User Id:</td>
+                        <td><%=@user.id%></td>
+                      </tr>
+                       <tr>
+                        <td>User Since:</td>
+                        <td><%=@user.date_created_user%></td>
+                      </tr>
                        <tr>
                         <td>Hometown:</td>
                         <td><%=@user.hometown%></td>
@@ -58,23 +83,16 @@
                       </tr>
                     </tbody>
                   </table>
-                  
-                  <a href="#" class="btn btn-primary">My Event Sign Ups</a>
-                  <a href="#" class="btn btn-primary">Team Event Sign Ups</a>
+
                 </div>
               </div>
             </div>
                  <div class="panel-footer">
-                        <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
+                        <a href="/events/new" >Create Event</a>
                         <span class="pull-right">
-                        <A href="/users/<%=@user.id%>/edit" >Edit Profile</A>
-                        <br>
-                        <A href="edit.html" >Logout</A>
-
-
+                        <a href="/users/<%=@user.id%>/edit" >Edit Profile</a>
                         </span>
                     </div>
-            
           </div>
         </div>
       </div>

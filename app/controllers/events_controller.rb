@@ -3,9 +3,9 @@ class EventsController < ApplicationController
     @events = Event.all
   end
   
-  # def my_time
-  #   time.strftime('%I:%M:%S %p')
-  # end
+  def my_date
+    datetime.strftime('%I:%M:%S %p')
+  end
   
   def update
     event = Event.find(params[:id])
@@ -18,10 +18,8 @@ class EventsController < ApplicationController
     @users = User.all
   end
   
-  def person
-  end
-  
-  def team
+  def new
+    @event = Event.new 
   end
   
   

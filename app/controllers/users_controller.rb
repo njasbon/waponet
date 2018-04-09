@@ -16,6 +16,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
   
+  def current_user_home
+  redirect_to current_user
+  end
+  
   def new 
     @user = User.new
   end

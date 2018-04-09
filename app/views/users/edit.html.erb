@@ -3,41 +3,41 @@
 <%= form_for @user, :method => :put, class: 'form-horizontal' do |f| %>
   <div class="form-group row">      
     <label class="control-label col-sm-2" for="profile_pic_url">Picture URL</label>
-      <div class="col-sm-6"><input type="profile_pic_url" class="form-control" id="profile_pic_url" value="<%= @user.profile_pic_url%>"></div>
+      <div class="col-sm-6"><input type="profile_pic_url" class="form-control" name="user[profile_pic_url]" id="profile_pic_url" value="<%= @user.profile_pic_url%>"></div>
   </div>
   <div class="form-group row">      
     <label class="control-label col-sm-2" for="first_name">First Name</label>
-      <div class="col-sm-4"><input type="first_name" class="form-control" id="first_name" value="<%=@user.first_name%>"></div>
+      <div class="col-sm-4"><input type="first_name" class="form-control" name="user[first_name]" id="first_name" value="<%=@user.first_name%>"></div>
   </div>
   <div class="form-group row">      
     <label class="control-label col-sm-2" for="last_name">Last Name</label>
-      <div class="col-sm-4"><input type="last_name" class="form-control" id="last_name" value="<%=@user.last_name%>"></div>
+      <div class="col-sm-4"><input type="last_name" class="form-control" name="user[last_name]" id="last_name" value="<%=@user.last_name%>"></div>
   </div>
   <div class="form-group row">      
     <label class="control-label col-sm-2" for="hometown">Hometown</label>
-      <div class="col-sm-4"><input type="hometown" class="form-control" id="hometown" value="<%=@user.hometown%>"></div>
+      <div class="col-sm-4"><input type="hometown" class="form-control" name="user[hometown]" id="hometown" value="<%=@user.hometown%>"></div>
   </div>
   <div class="form-group row">      
     <label class="control-label col-sm-2" for="team_name">Team Name</label>
-      <div class="col-sm-4"><input type="team_name" class="form-control" id="team_name" value="<%=@user.team_name%>"></div>
+      <div class="col-sm-4"><input type="team_name" class="form-control"  name="user[team_name]" id="team_name" value="<%=@user.team_name%>"></div>
   </div>
   <div class="form-group row">      
     <label class="control-label col-sm-2" for="email">Email</label>
-      <div class="col-sm-4"><input type="email" class="form-control" id="email" value="<%=@user.email%>"></div>
+      <div class="col-sm-4"><input type="email" class="form-control" name="user[email]" id="email" value="<%=@user.email%>"></div>
   </div>
   <div class="form-group row">      
     <label class="control-label col-sm-2" for="phone_number">Phone Number</label>
-      <div class="col-sm-4"><input type="phone_number" class="form-control" id="phone_number" value="<%=@user.phone_number%>"></div>
+      <div class="col-sm-4"><input type="phone_number" class="form-control" name="user[phone_number]"  id="phone_number" value="<%=@user.phone_number%>"></div>
   </div>
   <div class="form-group row">      
     <label class="control-label col-sm-2" for="gender">Gender</label>
-      <div class="col-sm-4"><input type="gender" class="form-control" id="gender" value="<%=@user.gender%>"></div>
+      <div class="col-sm-4"><input type="gender" class="form-control" name="user[gender]" id="gender" value="<%=@user.gender%>"></div>
   </div>
   <div class="form-group row">      
     <label class="control-label col-sm-2" for="age">Age</label>
-      <div class="col-sm-4"><input type="age" class="form-control" id="age" value="<%=@user.age%>"></div>
+      <div class="col-sm-4"><input type="age" class="form-control" name="user[age]" id="age" value="<%=@user.age%>"></div>
   </div>
-      <%= f.submit "Confirm edit" %>
+      <button type="submit" name="commit" class="btn btn-primary">Submit</button>
 
 <% end %>
 

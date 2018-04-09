@@ -5,9 +5,10 @@
     <tr>
         <th scope="col">Event Id</th>
         <th scope="col">Name</th>
-        <th scope="col">Date of Event</th>
+        <th scope="col">Start Date of Event</th>
+        <th scope="col">End Date of Event</th>
         <th scope="col">Team Host</th>
-        <th scope="col">Team Sign Up</th>
+        <th scope="col">Sign Up</th>
 
     </tr>
     </thead>
@@ -17,6 +18,7 @@
         <td><%= event.id %> </td>
         <td><%= event.name %> </td>
         <td><%= event.my_date %> </td> 
+        <td><%= event.end_date %> </td> 
         <td><%= event.team_host %> </td>
         
         <td><%= link_to 'Sign up for Event', "/events/#{event.id}" %></td>

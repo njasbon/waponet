@@ -22,6 +22,7 @@
               <a href="/" class="col navbar-left"><%= image_tag "waponet_transparent.png" %></a>
               <ul class="nav navbar-nav col">
                 <li class= " col header-elements"><a href="/events/">Events</a></li>
+                <li class= " col header-elements"><a href="/users/<%=current_user.id%>"> Account</a></li>
                 <li class= "col header-elements">
                 <% if user_signed_in? %>
                   <li class= "col header-elements"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
@@ -46,7 +47,7 @@
     <%= yield %>
     </div>
     
-  <footer class ="page-footer font-small stylish-color-dark pt-4 mt-4">
+  <footer class ="page-footer stylish-color-dark pt-4 mt-4">
     <!--Copyright-->
     <div class="footer-copyright py-3 text-center">
         © 2018 Copyright:
