@@ -11,6 +11,7 @@ default: &default
 
 development:
   <<: *default
+  adapter: sqlite3
   database: waponet_development
 
 # Warning: The database defined as "test" will be erased and
@@ -22,5 +23,6 @@ test:
 
 production:
   <<: *default
+  adapter: postgresql
   database: waponet_production
   username: waponet

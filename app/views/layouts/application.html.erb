@@ -22,7 +22,9 @@
               <a href="/" class="col navbar-left"><%= image_tag "waponet_transparent.png" %></a>
               <ul class="nav navbar-nav col">
                 <li class= " col header-elements"><a href="/events/">Events</a></li>
-                <li class= " col header-elements"><a href="/users/<%=current_user.id%>"> Account</a></li>
+                <% if user_signed_in? %>
+                  <li class= " col header-elements"><a href="/users/<%=current_user.id%>"> Account</a></li>
+                <% end  %>
                 <li class= "col header-elements">
                 <% if user_signed_in? %>
                   <li class= "col header-elements"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
